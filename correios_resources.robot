@@ -57,4 +57,4 @@ Procurar no rastreamento de código o número '${CODIGO_RASTREIO}'
 
 Verificar se foi direcionado para a pagina de '${TITULO_PAGINA}' 
     Element Text Should Be    id=titulo-pagina    ${TITULO_PAGINA}
-    Element Should Contain    id=objeto          ${CODIGO_RASTREIO}
+    Element Should Contain    id=objeto           ${CODIGO_RASTREIO}

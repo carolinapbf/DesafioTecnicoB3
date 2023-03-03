@@ -1,275 +1,296 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.11.2 on win32)" generated="20230303 16:57:27.670" rpa="false" schemaversion="3">
-<suite id="s1" name="Correios Test" source="C:\Users\phfer\Desktop\DesafioTecnicoB3\correios_test.robot">
-<test id="s1-t1" name="Caso de teste 01 - Desafio tecnico ID Check" line="8">
+<robot generator="Robot 6.0.2 (Python 3.11.2 on win32)" generated="20230303 17:32:35.938" rpa="false" schemaversion="3">
+<suite id="s1" name="Correios Test" source="C:\Users\phfer\Desktop\DesafioTecnicoB3\DesafioTecnicoB3\correios_test.robot">
+<test id="s1-t1" name="Caso de teste 01 - Verificar um cep inválido" line="8">
 <kw name="Abrir o navegador" library="correios_resources" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>browser= chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230303 16:57:27.903" level="INFO">Opening browser ' chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20230303 16:57:27.903" endtime="20230303 16:57:29.146"/>
+<msg timestamp="20230303 17:32:36.152" level="INFO">Opening browser ' chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20230303 17:32:36.152" endtime="20230303 17:32:37.443"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230303 16:57:29.146" endtime="20230303 16:57:29.279"/>
+<status status="PASS" starttime="20230303 17:32:37.444" endtime="20230303 17:32:37.570"/>
 </kw>
-<status status="PASS" starttime="20230303 16:57:27.902" endtime="20230303 16:57:29.279"/>
+<status status="PASS" starttime="20230303 17:32:36.151" endtime="20230303 17:32:37.570"/>
 </kw>
 <kw name="Entre no site dos correios" library="correios_resources">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20230303 16:57:29.280" level="INFO">Opening url 'https://www.correios.com.br/'</msg>
-<status status="PASS" starttime="20230303 16:57:29.280" endtime="20230303 16:57:32.521"/>
+<msg timestamp="20230303 17:32:37.571" level="INFO">Opening url 'https://www.correios.com.br/'</msg>
+<status status="PASS" starttime="20230303 17:32:37.571" endtime="20230303 17:32:39.997"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${FECHAR_AJUDANTE_VIRTUAL}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230303 16:57:32.522" level="INFO">Clicking element 'css:#header-balao #carol-fecha'.</msg>
-<status status="PASS" starttime="20230303 16:57:32.521" endtime="20230303 16:57:32.571"/>
+<msg timestamp="20230303 17:32:39.998" level="INFO">Clicking element 'css:#header-balao #carol-fecha'.</msg>
+<status status="PASS" starttime="20230303 17:32:39.997" endtime="20230303 17:32:40.057"/>
 </kw>
 <kw name="Execute Javascript" library="SeleniumLibrary">
 <arg>window.scrollTo(0,1500)</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20230303 16:57:32.572" level="INFO">Executing JavaScript:
+<msg timestamp="20230303 17:32:40.059" level="INFO">Executing JavaScript:
 window.scrollTo(0,1500)
 Without any arguments.</msg>
-<status status="PASS" starttime="20230303 16:57:32.571" endtime="20230303 16:57:32.589"/>
+<status status="PASS" starttime="20230303 17:32:40.057" endtime="20230303 17:32:40.067"/>
 </kw>
-<status status="PASS" starttime="20230303 16:57:29.280" endtime="20230303 16:57:32.589"/>
+<status status="PASS" starttime="20230303 17:32:37.571" endtime="20230303 17:32:40.067"/>
 </kw>
 <kw name="Procure pelo CEP '80700000'" library="correios_resources" sourcename="Procure pelo CEP '${CEP}'">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${CAMPO_BUSCA_CEP}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20230303 16:57:32.590" endtime="20230303 16:57:32.626"/>
+<status status="PASS" starttime="20230303 17:32:40.068" endtime="20230303 17:32:40.095"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${CAMPO_BUSCA_CEP}</arg>
 <arg>${CEP}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230303 16:57:32.627" level="INFO">Typing text '80700000' into text field '//input[@name='relaxation']'.</msg>
-<status status="PASS" starttime="20230303 16:57:32.626" endtime="20230303 16:57:32.709"/>
+<msg timestamp="20230303 17:32:40.096" level="INFO">Typing text '80700000' into text field '//input[@name='relaxation']'.</msg>
+<status status="PASS" starttime="20230303 17:32:40.095" endtime="20230303 17:32:40.173"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
 <arg>${BUSCA_CEP}</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20230303 16:57:32.709" endtime="20230303 16:57:32.737"/>
+<status status="PASS" starttime="20230303 17:32:40.173" endtime="20230303 17:32:40.200"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${BUSCA_CEP}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230303 16:57:32.738" level="INFO">Clicking element 'css:input#relaxation+button'.</msg>
-<status status="PASS" starttime="20230303 16:57:32.737" endtime="20230303 16:57:32.794"/>
+<msg timestamp="20230303 17:32:40.200" level="INFO">Clicking element 'css:input#relaxation+button'.</msg>
+<status status="PASS" starttime="20230303 17:32:40.200" endtime="20230303 17:32:40.262"/>
 </kw>
 <kw name="Switch Window" library="SeleniumLibrary">
 <arg>NEW</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20230303 16:57:32.794" endtime="20230303 16:57:32.808"/>
+<status status="PASS" starttime="20230303 17:32:40.262" endtime="20230303 17:32:40.311"/>
 </kw>
-<status status="PASS" starttime="20230303 16:57:32.589" endtime="20230303 16:57:32.808"/>
+<status status="PASS" starttime="20230303 17:32:40.068" endtime="20230303 17:32:40.311"/>
 </kw>
 <kw name="Verificar que o CEP não existe" library="correios_resources">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${RESULTADO_ALERTA}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20230303 16:57:32.809" endtime="20230303 16:57:33.422"/>
+<status status="PASS" starttime="20230303 17:32:40.312" endtime="20230303 17:32:40.898"/>
 </kw>
 <kw name="Element Text Should Be" library="SeleniumLibrary">
 <arg>${RESULTADO_ALERTA}</arg>
 <arg>${MESSAGE}</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<msg timestamp="20230303 16:57:33.422" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
-<msg timestamp="20230303 16:57:33.424" level="INFO">Verifying element 'id=mensagem-resultado-alerta' contains exact text 'Dados não encontrado'.</msg>
-<status status="PASS" starttime="20230303 16:57:33.422" endtime="20230303 16:57:33.444"/>
+<msg timestamp="20230303 17:32:40.898" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg timestamp="20230303 17:32:40.899" level="INFO">Verifying element 'id=mensagem-resultado-alerta' contains exact text 'Dados não encontrado'.</msg>
+<status status="PASS" starttime="20230303 17:32:40.898" endtime="20230303 17:32:40.916"/>
 </kw>
-<status status="PASS" starttime="20230303 16:57:32.808" endtime="20230303 16:57:33.444"/>
+<status status="PASS" starttime="20230303 17:32:40.312" endtime="20230303 17:32:40.916"/>
+</kw>
+<kw name="Fechar o navegador" library="correios_resources" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230303 17:32:40.916" endtime="20230303 17:32:43.072"/>
+</kw>
+<status status="PASS" starttime="20230303 17:32:40.916" endtime="20230303 17:32:43.072"/>
 </kw>
 <doc>Este teste verifica não encontrar um cep invalido no site dos correios</doc>
-<status status="PASS" starttime="20230303 16:57:27.902" endtime="20230303 16:57:33.445"/>
+<status status="PASS" starttime="20230303 17:32:36.151" endtime="20230303 17:32:43.072"/>
 </test>
-<test id="s1-t2" name="Caso de teste 02 -" line="14">
+<test id="s1-t2" name="Caso de teste 02 - Verificar um cep válido" line="14">
 <kw name="Abrir o navegador" library="correios_resources" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>browser= chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230303 16:57:33.447" level="INFO">Opening browser ' chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20230303 16:57:33.447" endtime="20230303 16:57:34.586"/>
+<msg timestamp="20230303 17:32:43.074" level="INFO">Opening browser ' chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20230303 17:32:43.074" endtime="20230303 17:32:44.336"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230303 16:57:34.586" endtime="20230303 16:57:34.709"/>
+<status status="PASS" starttime="20230303 17:32:44.337" endtime="20230303 17:32:44.464"/>
 </kw>
-<status status="PASS" starttime="20230303 16:57:33.447" endtime="20230303 16:57:34.709"/>
+<status status="PASS" starttime="20230303 17:32:43.074" endtime="20230303 17:32:44.465"/>
 </kw>
 <kw name="Entre no site dos correios" library="correios_resources">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20230303 16:57:34.710" level="INFO">Opening url 'https://www.correios.com.br/'</msg>
-<status status="PASS" starttime="20230303 16:57:34.710" endtime="20230303 16:57:37.899"/>
+<msg timestamp="20230303 17:32:44.466" level="INFO">Opening url 'https://www.correios.com.br/'</msg>
+<status status="PASS" starttime="20230303 17:32:44.466" endtime="20230303 17:32:47.567"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${FECHAR_AJUDANTE_VIRTUAL}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230303 16:57:37.900" level="INFO">Clicking element 'css:#header-balao #carol-fecha'.</msg>
-<status status="PASS" starttime="20230303 16:57:37.899" endtime="20230303 16:57:38.002"/>
+<msg timestamp="20230303 17:32:47.568" level="INFO">Clicking element 'css:#header-balao #carol-fecha'.</msg>
+<status status="PASS" starttime="20230303 17:32:47.568" endtime="20230303 17:32:47.618"/>
 </kw>
 <kw name="Execute Javascript" library="SeleniumLibrary">
 <arg>window.scrollTo(0,1500)</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20230303 16:57:38.004" level="INFO">Executing JavaScript:
+<msg timestamp="20230303 17:32:47.619" level="INFO">Executing JavaScript:
 window.scrollTo(0,1500)
 Without any arguments.</msg>
-<status status="PASS" starttime="20230303 16:57:38.002" endtime="20230303 16:57:38.010"/>
+<status status="PASS" starttime="20230303 17:32:47.618" endtime="20230303 17:32:47.624"/>
 </kw>
-<status status="PASS" starttime="20230303 16:57:34.710" endtime="20230303 16:57:38.010"/>
+<status status="PASS" starttime="20230303 17:32:44.465" endtime="20230303 17:32:47.625"/>
 </kw>
 <kw name="Procure pelo CEP '01013-001'" library="correios_resources" sourcename="Procure pelo CEP '${CEP}'">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${CAMPO_BUSCA_CEP}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20230303 16:57:38.011" endtime="20230303 16:57:38.114"/>
+<status status="PASS" starttime="20230303 17:32:47.626" endtime="20230303 17:32:47.653"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${CAMPO_BUSCA_CEP}</arg>
 <arg>${CEP}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230303 16:57:38.115" level="INFO">Typing text '01013-001' into text field '//input[@name='relaxation']'.</msg>
-<status status="PASS" starttime="20230303 16:57:38.114" endtime="20230303 16:57:38.251"/>
+<msg timestamp="20230303 17:32:47.654" level="INFO">Typing text '01013-001' into text field '//input[@name='relaxation']'.</msg>
+<status status="PASS" starttime="20230303 17:32:47.653" endtime="20230303 17:32:47.746"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
 <arg>${BUSCA_CEP}</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20230303 16:57:38.251" endtime="20230303 16:57:38.294"/>
+<status status="PASS" starttime="20230303 17:32:47.746" endtime="20230303 17:32:47.774"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${BUSCA_CEP}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230303 16:57:38.295" level="INFO">Clicking element 'css:input#relaxation+button'.</msg>
-<status status="PASS" starttime="20230303 16:57:38.295" endtime="20230303 16:57:38.409"/>
+<msg timestamp="20230303 17:32:47.775" level="INFO">Clicking element 'css:input#relaxation+button'.</msg>
+<status status="PASS" starttime="20230303 17:32:47.774" endtime="20230303 17:32:47.841"/>
 </kw>
 <kw name="Switch Window" library="SeleniumLibrary">
 <arg>NEW</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20230303 16:57:38.409" endtime="20230303 16:57:38.672"/>
+<status status="PASS" starttime="20230303 17:32:47.841" endtime="20230303 17:32:47.899"/>
 </kw>
-<status status="PASS" starttime="20230303 16:57:38.011" endtime="20230303 16:57:38.673"/>
+<status status="PASS" starttime="20230303 17:32:47.625" endtime="20230303 17:32:47.899"/>
 </kw>
 <kw name="Verificar que o resultado seja em 'Rua Quinze de Novembro' em 'São Paulo/SP'" library="correios_resources" sourcename="Verificar que o resultado seja em '${ENDEREÇO}' em '${CIDADE}'">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${RESULTADO_TABELA}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20230303 16:57:38.674" endtime="20230303 16:57:39.137"/>
+<status status="PASS" starttime="20230303 17:32:47.900" endtime="20230303 17:32:48.569"/>
 </kw>
 <kw name="Table Should Contain" library="SeleniumLibrary">
 <arg>${RESULTADO_TABELA}</arg>
 <arg>${ENDEREÇO}</arg>
 <doc>Verifies table contains text ``expected``.</doc>
-<status status="PASS" starttime="20230303 16:57:39.138" endtime="20230303 16:57:39.363"/>
+<status status="PASS" starttime="20230303 17:32:48.570" endtime="20230303 17:32:48.712"/>
 </kw>
 <kw name="Table Should Contain" library="SeleniumLibrary">
 <arg>${RESULTADO_TABELA}</arg>
 <arg>${CIDADE}</arg>
 <doc>Verifies table contains text ``expected``.</doc>
-<status status="PASS" starttime="20230303 16:57:39.363" endtime="20230303 16:57:39.515"/>
+<status status="PASS" starttime="20230303 17:32:48.712" endtime="20230303 17:32:48.816"/>
 </kw>
-<status status="PASS" starttime="20230303 16:57:38.674" endtime="20230303 16:57:39.515"/>
+<status status="PASS" starttime="20230303 17:32:47.899" endtime="20230303 17:32:48.816"/>
+</kw>
+<kw name="Fechar o navegador" library="correios_resources" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230303 17:32:48.817" endtime="20230303 17:32:50.946"/>
+</kw>
+<status status="PASS" starttime="20230303 17:32:48.817" endtime="20230303 17:32:50.946"/>
 </kw>
 <doc>Este teste verifica encontrar um cep valido no site dos correios</doc>
-<status status="PASS" starttime="20230303 16:57:33.446" endtime="20230303 16:57:39.516"/>
+<status status="PASS" starttime="20230303 17:32:43.073" endtime="20230303 17:32:50.947"/>
 </test>
-<test id="s1-t3" name="Caso de teste 03 -" line="21">
+<test id="s1-t3" name="Caso de teste 03 - Verificar um código de rastreamento inválido" line="21">
 <kw name="Abrir o navegador" library="correios_resources" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>browser= chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230303 16:57:39.519" level="INFO">Opening browser ' chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20230303 16:57:39.519" endtime="20230303 16:57:46.075"/>
+<msg timestamp="20230303 17:32:50.955" level="INFO">Opening browser ' chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20230303 17:32:50.954" endtime="20230303 17:32:52.289"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230303 16:57:46.076" endtime="20230303 16:57:46.204"/>
+<status status="PASS" starttime="20230303 17:32:52.289" endtime="20230303 17:32:52.415"/>
 </kw>
-<status status="PASS" starttime="20230303 16:57:39.518" endtime="20230303 16:57:46.204"/>
+<status status="PASS" starttime="20230303 17:32:50.953" endtime="20230303 17:32:52.416"/>
 </kw>
 <kw name="Entre no site dos correios" library="correios_resources">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20230303 16:57:46.205" level="INFO">Opening url 'https://www.correios.com.br/'</msg>
-<status status="PASS" starttime="20230303 16:57:46.205" endtime="20230303 16:57:50.722"/>
+<msg timestamp="20230303 17:32:52.419" level="INFO">Opening url 'https://www.correios.com.br/'</msg>
+<status status="PASS" starttime="20230303 17:32:52.418" endtime="20230303 17:32:55.084"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${FECHAR_AJUDANTE_VIRTUAL}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230303 16:57:50.722" level="INFO">Clicking element 'css:#header-balao #carol-fecha'.</msg>
-<status status="PASS" starttime="20230303 16:57:50.722" endtime="20230303 16:57:50.792"/>
+<msg timestamp="20230303 17:32:55.086" level="INFO">Clicking element 'css:#header-balao #carol-fecha'.</msg>
+<status status="PASS" starttime="20230303 17:32:55.085" endtime="20230303 17:32:55.184"/>
 </kw>
 <kw name="Execute Javascript" library="SeleniumLibrary">
 <arg>window.scrollTo(0,1500)</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20230303 16:57:50.794" level="INFO">Executing JavaScript:
+<msg timestamp="20230303 17:32:55.185" level="INFO">Executing JavaScript:
 window.scrollTo(0,1500)
 Without any arguments.</msg>
-<status status="PASS" starttime="20230303 16:57:50.792" endtime="20230303 16:57:50.803"/>
+<status status="PASS" starttime="20230303 17:32:55.184" endtime="20230303 17:32:55.193"/>
 </kw>
-<status status="PASS" starttime="20230303 16:57:46.204" endtime="20230303 16:57:50.804"/>
+<status status="PASS" starttime="20230303 17:32:52.417" endtime="20230303 17:32:55.193"/>
 </kw>
 <kw name="Procurar no rastreamento de código o número 'SS987654321BR'" library="correios_resources" sourcename="Procurar no rastreamento de código o número '${CODIGO_RASTREIO}'">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${CAMPO_BUSCA_OBJETO}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20230303 16:57:50.804" endtime="20230303 16:57:50.860"/>
+<status status="PASS" starttime="20230303 17:32:55.194" endtime="20230303 17:32:55.305"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${CAMPO_BUSCA_OBJETO}</arg>
 <arg>${CODIGO_RASTREIO}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230303 16:57:50.861" level="INFO">Typing text 'SS987654321BR' into text field '//input[@name='objetos']'.</msg>
-<status status="PASS" starttime="20230303 16:57:50.860" endtime="20230303 16:57:50.997"/>
+<msg timestamp="20230303 17:32:55.306" level="INFO">Typing text 'SS987654321BR' into text field '//input[@name='objetos']'.</msg>
+<status status="PASS" starttime="20230303 17:32:55.305" endtime="20230303 17:32:55.437"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
 <arg>${BUSCA_OBJETO}</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20230303 16:57:50.998" endtime="20230303 16:57:51.040"/>
+<status status="PASS" starttime="20230303 17:32:55.437" endtime="20230303 17:32:55.513"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${BUSCA_OBJETO}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230303 16:57:51.041" level="INFO">Clicking element 'css:input#objetos+button'.</msg>
-<status status="PASS" starttime="20230303 16:57:51.040" endtime="20230303 16:57:51.134"/>
+<msg timestamp="20230303 17:32:55.514" level="INFO">Clicking element 'css:input#objetos+button'.</msg>
+<status status="PASS" starttime="20230303 17:32:55.513" endtime="20230303 17:32:55.603"/>
 </kw>
 <kw name="Switch Window" library="SeleniumLibrary">
 <arg>NEW</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20230303 16:57:51.135" endtime="20230303 16:57:51.454"/>
+<status status="PASS" starttime="20230303 17:32:55.603" endtime="20230303 17:32:55.682"/>
 </kw>
-<status status="PASS" starttime="20230303 16:57:50.804" endtime="20230303 16:57:51.455"/>
+<status status="PASS" starttime="20230303 17:32:55.194" endtime="20230303 17:32:55.682"/>
 </kw>
 <kw name="Verificar se foi direcionado para a pagina de 'Rastreamento'" library="correios_resources" sourcename="Verificar se foi direcionado para a pagina de '${TITULO_PAGINA}'">
 <kw name="Element Text Should Be" library="SeleniumLibrary">
 <arg>id=titulo-pagina</arg>
 <arg>${TITULO_PAGINA}</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<msg timestamp="20230303 16:57:51.457" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
-<msg timestamp="20230303 16:57:51.460" level="INFO">Verifying element 'id=titulo-pagina' contains exact text 'Rastreamento'.</msg>
-<status status="PASS" starttime="20230303 16:57:51.457" endtime="20230303 16:57:55.334"/>
+<msg timestamp="20230303 17:32:55.683" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg timestamp="20230303 17:32:55.686" level="INFO">Verifying element 'id=titulo-pagina' contains exact text 'Rastreamento'.</msg>
+<status status="PASS" starttime="20230303 17:32:55.683" endtime="20230303 17:32:56.350"/>
 </kw>
 <kw name="Element Should Contain" library="SeleniumLibrary">
 <arg>id=objeto</arg>
 <arg>${CODIGO_RASTREIO}</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20230303 16:57:55.365" level="INFO">Element 'id=objeto' contains text ''.</msg>
-<status status="PASS" starttime="20230303 16:57:55.334" endtime="20230303 16:57:55.365"/>
+<msg timestamp="20230303 17:32:56.380" level="INFO">Element 'id=objeto' contains text ''.</msg>
+<status status="PASS" starttime="20230303 17:32:56.350" endtime="20230303 17:32:56.380"/>
 </kw>
-<status status="PASS" starttime="20230303 16:57:51.456" endtime="20230303 16:57:55.365"/>
+<status status="PASS" starttime="20230303 17:32:55.683" endtime="20230303 17:32:56.381"/>
+</kw>
+<kw name="Fechar o navegador" library="correios_resources" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230303 17:32:56.382" endtime="20230303 17:32:58.574"/>
+</kw>
+<status status="PASS" starttime="20230303 17:32:56.381" endtime="20230303 17:32:58.574"/>
 </kw>
 <doc>Este teste verifica não encontrar um objeto com numero de rastreio invalido no site dos correios</doc>
-<status status="PASS" starttime="20230303 16:57:39.517" endtime="20230303 16:57:55.366"/>
+<status status="PASS" starttime="20230303 17:32:50.951" endtime="20230303 17:32:58.575"/>
 </test>
 <doc>Site dos correios</doc>
-<status status="PASS" starttime="20230303 16:57:27.671" endtime="20230303 16:57:55.368"/>
+<status status="PASS" starttime="20230303 17:32:35.939" endtime="20230303 17:32:58.577"/>
 </suite>
 <statistics>
 <total>
@@ -282,7 +303,7 @@ Without any arguments.</msg>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20230303 16:57:33.422" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
-<msg timestamp="20230303 16:57:51.457" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg timestamp="20230303 17:32:40.898" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg timestamp="20230303 17:32:55.683" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
 </errors>
 </robot>
