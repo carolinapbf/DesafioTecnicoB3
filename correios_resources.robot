@@ -26,35 +26,35 @@ Abrir o navegador
 Fechar o navegador
    Close Browser
 Entre no site dos correios
-    Go To    ${URL}
-    Click Element      ${FECHAR_AJUDANTE_VIRTUAL}
-    Execute Javascript  window.scrollTo(0,1500)
+    Go To                            ${URL}
+    Click Element                    ${FECHAR_AJUDANTE_VIRTUAL}
+    Execute Javascript               window.scrollTo(0,1500)
     
 Procure pelo CEP '${CEP}'
     Wait Until Element Is Visible    ${CAMPO_BUSCA_CEP}
-    Input Text    ${CAMPO_BUSCA_CEP}    ${CEP}
+    Input Text                       ${CAMPO_BUSCA_CEP}    ${CEP}
     Wait Until Element Is Enabled    ${BUSCA_CEP}
-    Click Element  ${BUSCA_CEP}
-    Switch Window  NEW
+    Click Element                    ${BUSCA_CEP}
+    Switch Window                    NEW
    
 Verificar que o CEP não existe
    
     Wait Until Element Is Visible    ${RESULTADO_ALERTA}
-    Element Text Should Be    ${RESULTADO_ALERTA}    ${MESSAGE}
+    Element Text Should Be           ${RESULTADO_ALERTA}    ${MESSAGE}
     
 Verificar que o resultado seja em '${ENDEREÇO}' em '${CIDADE}'
         
-        Wait Until Element Is Visible    ${RESULTADO_TABELA}
-        Table Should Contain    ${RESULTADO_TABELA}    ${ENDEREÇO}
-        Table Should Contain    ${RESULTADO_TABELA}    ${CIDADE}
+    Wait Until Element Is Visible    ${RESULTADO_TABELA}
+    Table Should Contain             ${RESULTADO_TABELA}    ${ENDEREÇO}
+    Table Should Contain             ${RESULTADO_TABELA}    ${CIDADE}
 
 Procurar no rastreamento de código o número '${CODIGO_RASTREIO}'
     Wait Until Element Is Visible    ${CAMPO_BUSCA_OBJETO}
-    Input Text    ${CAMPO_BUSCA_OBJETO}    ${CODIGO_RASTREIO}
+    Input Text                       ${CAMPO_BUSCA_OBJETO}    ${CODIGO_RASTREIO}
     Wait Until Element Is Enabled    ${BUSCA_OBJETO}
-    Click Element  ${BUSCA_OBJETO}
-    Switch Window  NEW
+    Click Element                    ${BUSCA_OBJETO}
+    Switch Window                    NEW
 
 Verificar se foi direcionado para a pagina de '${TITULO_PAGINA}' 
     Element Text Should Be    id=titulo-pagina    ${TITULO_PAGINA}
-    Element Should Contain     id=objeto    ${CODIGO_RASTREIO}
+    Element Should Contain    id=objeto          ${CODIGO_RASTREIO}
